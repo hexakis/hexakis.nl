@@ -201,7 +201,7 @@ render_md_files_lowdown() {
 render_md_files_Markdown_pl() {
 	while read -r f
 	do
-		Markdown.pl < "$1/$f" |
+		./Markdown.pl < "$1/$f" |
 		render_html_file "$3" \
 		> "$2/${f%\.md}.html"
 	done
