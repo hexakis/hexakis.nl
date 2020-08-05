@@ -70,14 +70,8 @@ main() {
 				echo "$fs" | grep '\.md$' |
 				render_md_files_lowdown "$src" "$dst" "$title"
 			else
-				if test -x "$(which Markdown.pl 2> /dev/null)"
-				then
 					echo "$fs" | grep '\.md$' |
 					render_md_files_Markdown_pl "$src" "$dst" "$title"
-				else
-					echo "couldn't find lowdown nor Markdown.pl"
-					exit 3
-				fi
 			fi
 		fi
 
